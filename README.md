@@ -157,13 +157,13 @@ The singleton instance of the ``` AuthenticationsController ``` class can be acc
 var controller = lib.AuthenticationsController;
 ```
 
-#### <a name="get_authentications"></a>![Method: ](https://apidocs.io/img/method.png ".AuthenticationsController.getAuthentications") getAuthentications
+#### <a name="get_authentication"></a>![Method: ](https://apidocs.io/img/method.png ".AuthenticationsController.getAuthentication") getAuthentication
 
 > Allow clients to test authentication on Genius Referrals platform.
 
 
 ```javascript
-function getAuthentications(callback)
+function getAuthentication(callback)
 ```
 
 #### Example Usage
@@ -171,7 +171,7 @@ function getAuthentications(callback)
 ```javascript
 
 
-    controller.getAuthentications(function(error, response, context) {
+    controller.getAuthentication(function(error, response, context) {
 
     
 	});
@@ -376,8 +376,8 @@ function getAdvocates(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 216;
-    var limit = 216;
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
@@ -418,6 +418,286 @@ function patchAdvocate(accountSlug, advocateToken, advocatePatchForm, callback)
     });
 
     controller.patchAdvocate(accountSlug, advocateToken, advocatePatchForm, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_share_links"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getShareLinks") getShareLinks
+
+> Get the advocates share links. These are the links that advocates use to share your services online.  Share links are wrapped per campaign and widget package.
+
+
+```javascript
+function getShareLinks(accountSlug, advocateToken, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+
+    controller.getShareLinks(accountSlug, advocateToken, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="put_payment_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.putPaymentMethod") putPaymentMethod
+
+> Update a payment method.
+
+
+```javascript
+function putPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, advocatePaymentMethodForm, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The advocate's token |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodId |  ``` Required ```  | The payment method's identifier |
+| advocatePaymentMethodForm |  ``` Required ```  | The body of the request |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var advocatePaymentMethodId = 97;
+    var advocatePaymentMethodForm = new PaymentMethodForm({"key":"value"});
+
+    controller.putPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, advocatePaymentMethodForm, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_payment_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getPaymentMethod") getPaymentMethod
+
+> Get an advocate's payment method
+
+
+```javascript
+function getPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodId |  ``` Required ```  | The payment method's identifier |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var advocatePaymentMethodId = 97;
+
+    controller.getPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="post_payment_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.postPaymentMethod") postPaymentMethod
+
+> Create a new payment method.
+
+
+```javascript
+function postPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodForm, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| advocatePaymentMethodForm |  ``` Required ```  | The body of the request |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var advocatePaymentMethodForm = new PaymentMethodForm({"key":"value"});
+
+    controller.postPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodForm, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_bonus_redemption_method"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getBonusRedemptionMethod") getBonusRedemptionMethod
+
+> Get bonuses redemption method.
+
+
+```javascript
+function getBonusRedemptionMethod(bonusesRedemptionMethodSlug, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| bonusesRedemptionMethodSlug |  ``` Required ```  | The bonus redemption method's identifier |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var bonusesRedemptionMethodSlug = bonuses_redemption_method_slug;
+
+    controller.getBonusRedemptionMethod(bonusesRedemptionMethodSlug, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_bonus_redemption_methods"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getBonusRedemptionMethods") getBonusRedemptionMethods
+
+> Get bonuses redemption methods.
+
+
+```javascript
+function getBonusRedemptionMethods(callback)
+```
+
+#### Example Usage
+
+```javascript
+
+
+    controller.getBonusRedemptionMethods(function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_currencies"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getCurrencies") getCurrencies
+
+> Get currencies.
+
+
+```javascript
+function getCurrencies(callback)
+```
+
+#### Example Usage
+
+```javascript
+
+
+    controller.getCurrencies(function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_currency"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getCurrency") getCurrency
+
+> Get a currency.
+
+
+```javascript
+function getCurrency(code, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| code |  ``` Required ```  | The currency's code |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var code = "code";
+
+    controller.getCurrency(code, function(error, response, context) {
+
+    
+	});
+```
+
+
+
+#### <a name="get_payment_methods"></a>![Method: ](https://apidocs.io/img/method.png ".AdvocatesController.getPaymentMethods") getPaymentMethods
+
+> Get the advocate's payment methods.
+
+
+```javascript
+function getPaymentMethods(accountSlug, advocateToken, page, limit, filter, sort, callback)
+```
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSlug |  ``` Required ```  | The account identifier |
+| advocateToken |  ``` Required ```  | The advocate's token |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| filter |  ``` Optional ```  | Allowed fields: username, is_active. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
+| sort |  ``` Optional ```  | Allowed fields: username, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort=last_name\|first_name\|-hire_date |
+
+
+
+#### Example Usage
+
+```javascript
+
+    var accountSlug = account_slug;
+    var advocateToken = advocate_token;
+    var page = 97;
+    var limit = 97;
+    var filter = "filter";
+    var sort = "sort";
+
+    controller.getPaymentMethods(accountSlug, advocateToken, page, limit, filter, sort, function(error, response, context) {
 
     
 	});
@@ -479,8 +759,8 @@ function getAccounts(page, limit, filter, sort, callback)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort=last_name\|first_name\|-hire_date |
 
@@ -490,8 +770,8 @@ function getAccounts(page, limit, filter, sort, callback)
 
 ```javascript
 
-    var page = 216;
-    var limit = 216;
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
@@ -589,7 +869,7 @@ function getTopAdvocates(accountSlug, campaignSlug, limit, from, to, callback)
 |-----------|------|-------------|
 | accountSlug |  ``` Optional ```  | The account identifier |
 | campaignSlug |  ``` Optional ```  | The campaign identifier |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10) |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10) |
 | from |  ``` Optional ```  | The datetime were the range of the search starts |
 | to |  ``` Optional ```  | The datetime were the range of the search stops |
 
@@ -601,7 +881,7 @@ function getTopAdvocates(accountSlug, campaignSlug, limit, from, to, callback)
 
     var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
-    var limit = 216;
+    var limit = 97;
     var from = date("D M d, Y G:i");
     var to = date("D M d, Y G:i");
 
@@ -897,13 +1177,13 @@ function deleteReferral(accountSlug, advocateToken, referralId, callback)
 
 
 
-#### <a name="post_referrals"></a>![Method: ](https://apidocs.io/img/method.png ".ReferralsController.postReferrals") postReferrals
+#### <a name="post_referral"></a>![Method: ](https://apidocs.io/img/method.png ".ReferralsController.postReferral") postReferral
 
 > Create a new referral.
 
 
 ```javascript
-function postReferrals(accountSlug, advocateToken, referralForm, callback)
+function postReferral(accountSlug, advocateToken, referralForm, callback)
 ```
 #### Parameters
 
@@ -923,7 +1203,7 @@ function postReferrals(accountSlug, advocateToken, referralForm, callback)
     var advocateToken = advocate_token;
     var referralForm = new ReferralForm({"key":"value"});
 
-    controller.postReferrals(accountSlug, advocateToken, referralForm, function(error, response, context) {
+    controller.postReferral(accountSlug, advocateToken, referralForm, function(error, response, context) {
 
     
 	});
@@ -981,8 +1261,8 @@ function getReferrals(accountSlug, advocateToken, page, limit, filter, sort, cal
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
 | advocateToken |  ``` Required ```  | The advocate's token |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: url, referral_origin_slug, created. Use the following delimiters to build your filters params. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -994,8 +1274,8 @@ function getReferrals(accountSlug, advocateToken, page, limit, filter, sort, cal
 
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
-    var page = 52;
-    var limit = 52;
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
@@ -1145,7 +1425,7 @@ function patchRedemptionRequest(accountSlug, redemptionRequestId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var redemptionRequestId = 52;
+    var redemptionRequestId = 97;
 
     controller.patchRedemptionRequest(accountSlug, redemptionRequestId, function(error, response, context) {
 
@@ -1232,8 +1512,8 @@ function getRedemptionRequests(accountSlug, page, limit, filter, sort, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: redemption_request_id, name, lastname, email, request_status_slug, request_action_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1244,8 +1524,8 @@ function getRedemptionRequests(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = "page";
-    var limit = "limit";
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
@@ -1282,8 +1562,8 @@ function getBonuses(accountSlug, page, limit, filter, sort, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name, lastname, email, campaign_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: name, lastname, email, created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1294,8 +1574,8 @@ function getBonuses(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 52;
-    var limit = 52;
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
@@ -1307,13 +1587,13 @@ function getBonuses(accountSlug, page, limit, filter, sort, callback)
 
 
 
-#### <a name="post_bonuses"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postBonuses") postBonuses
+#### <a name="post_bonus"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postBonus") postBonus
 
 > Make an attempt to give a bonus for to the advocate's referrer. The system processes the given advocate (referral) and creates a bonus for the advocate's referrer if is needed. All restrictions set on the campaigns for this account will be check out before giving the bonus to the advocate's referrer.
 
 
 ```javascript
-function postBonuses(accountSlug, bonusesForm, callback)
+function postBonus(accountSlug, bonusesForm, callback)
 ```
 #### Parameters
 
@@ -1331,7 +1611,7 @@ function postBonuses(accountSlug, bonusesForm, callback)
     var accountSlug = account_slug;
     var bonusesForm = new BonusesForm({"key":"value"});
 
-    controller.postBonuses(accountSlug, bonusesForm, function(error, response, context) {
+    controller.postBonus(accountSlug, bonusesForm, function(error, response, context) {
 
     
 	});
@@ -1339,13 +1619,13 @@ function postBonuses(accountSlug, bonusesForm, callback)
 
 
 
-#### <a name="get_bonuses_checkup"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusesCheckup") getBonusesCheckup
+#### <a name="get_bonus_checkup"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusCheckup") getBonusCheckup
 
 > Check if there is a bonus to be given to the advocate. Allows the clients to check if there is a bonus to be given, it simulates the behaivor of a POST request to /accounts/{account_slug}/bonuses resource. This resource is idempotent.
 
 
 ```javascript
-function getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount, callback)
+function getBonusCheckup(accountSlug, advocateToken, reference, paymentAmount, callback)
 ```
 #### Parameters
 
@@ -1365,10 +1645,10 @@ function getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount,
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var reference = "reference";
-    var paymentAmount = 52.8554014432502;
+    var paymentAmount = 97.6565526019114;
 
     TestHelper.getFileContents("url", function(data) {
-        controller.getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount, function(error, response, context) {
+        controller.getBonusCheckup(accountSlug, advocateToken, reference, paymentAmount, function(error, response, context) {
 
         });
 	});
@@ -1376,13 +1656,13 @@ function getBonusesCheckup(accountSlug, advocateToken, reference, paymentAmount,
 
 
 
-#### <a name="post_bonuses_force"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postBonusesForce") postBonusesForce
+#### <a name="post_force_bonus"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.postForceBonus") postForceBonus
 
 > Force the system to give a bonus to an advocate. The system will not take into account the restriccions specified on the campaigns.
 
 
 ```javascript
-function postBonusesForce(accountSlug, bonusForm, callback)
+function postForceBonus(accountSlug, bonusForm, callback)
 ```
 #### Parameters
 
@@ -1398,9 +1678,9 @@ function postBonusesForce(accountSlug, bonusForm, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var bonusForm = new BonusesForm1({"key":"value"});
+    var bonusForm = new ForceBonusesForm({"key":"value"});
 
-    controller.postBonusesForce(accountSlug, bonusForm, function(error, response, context) {
+    controller.postForceBonus(accountSlug, bonusForm, function(error, response, context) {
 
     
 	});
@@ -1408,13 +1688,13 @@ function postBonusesForce(accountSlug, bonusForm, callback)
 
 
 
-#### <a name="get_bonuses_trace"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusesTrace") getBonusesTrace
+#### <a name="get_bonus_trace"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusTrace") getBonusTrace
 
 > Get a bonus request trace.
 
 
 ```javascript
-function getBonusesTrace(accountSlug, traceId, callback)
+function getBonusTrace(accountSlug, traceId, callback)
 ```
 #### Parameters
 
@@ -1430,9 +1710,9 @@ function getBonusesTrace(accountSlug, traceId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var traceId = 52;
+    var traceId = 97;
 
-    controller.getBonusesTrace(accountSlug, traceId, function(error, response, context) {
+    controller.getBonusTrace(accountSlug, traceId, function(error, response, context) {
 
     
 	});
@@ -1462,7 +1742,7 @@ function deleteBonus(accountSlug, bonusId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var bonusId = 52;
+    var bonusId = 97;
 
     controller.deleteBonus(accountSlug, bonusId, function(error, response, context) {
 
@@ -1494,7 +1774,7 @@ function getBonus(accountSlug, bonusId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var bonusId = 52;
+    var bonusId = 97;
 
     controller.getBonus(accountSlug, bonusId, function(error, response, context) {
 
@@ -1504,21 +1784,21 @@ function getBonus(accountSlug, bonusId, callback)
 
 
 
-#### <a name="get_bonuses_traces"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusesTraces") getBonusesTraces
+#### <a name="get_bonus_traces"></a>![Method: ](https://apidocs.io/img/method.png ".BonusesController.getBonusTraces") getBonusTraces
 
 > Get the list of bonuses traces (audit trail). Every time the system tries to give a bonus the an advocate a new trace is created.
 
 
 ```javascript
-function getBonusesTraces(accountSlug, page, limit, filter, sort, callback)
+function getBonusTraces(accountSlug, page, limit, filter, sort, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: reference, result, bonus_amount, advocate_token, advocate_referrer_token, campaign_slug, from, to, created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: created. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1529,12 +1809,12 @@ function getBonusesTraces(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 52;
-    var limit = 52;
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
-    controller.getBonusesTraces(accountSlug, page, limit, filter, sort, function(error, response, context) {
+    controller.getBonusTraces(accountSlug, page, limit, filter, sort, function(error, response, context) {
 
     
 	});
@@ -1599,8 +1879,8 @@ function getCampaigns(accountSlug, page, limit, filter, sort, callback)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | accountSlug |  ``` Required ```  | The account identifier |
-| page |  ``` Optional ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
-| limit |  ``` Optional ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
+| page |  ``` Optional ```  ``` DefaultValue ```  | Page number, e.g. 1 would start at the first result, and 10 would start at the tenth result. |
+| limit |  ``` Optional ```  ``` DefaultValue ```  | Maximum number of results to return in the response. Default (10), threshold (100) |
 | filter |  ``` Optional ```  | Allowed fields: name, description, start_date, end_date, is_active (true\|false), created. Use the following delimiters to build your filters params. The vertical bar ('\|') to separate individual filter phrases and a double colon ('::') to separate the names and values. The delimiter of the double colon (':') separates the property name from the comparison value, enabling the comparison value to contain spaces. Example: www.example.com/users?filter='name::todd\|city::denver\|title::grand poobah' |
 | sort |  ``` Optional ```  | Allowed fields: campaign_slug, created, start_date, end_date, is_active. Use sort query-string parameter that contains a delimited set of property names. For each property name, sort in ascending order, and for each property prefixed with a dash ('-') sort in descending order. Separate each property name with a vertical bar ('\|'), which is consistent with the separation of the name\|value pairs in filtering, above. For example, if we want to retrieve users in order of their last name (ascending), first name (ascending) and hire date (descending), the request might look like this www.example.com/users?sort='last_name\|first_name\|-hire_date' |
 
@@ -1611,8 +1891,8 @@ function getCampaigns(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 52;
-    var limit = 52;
+    var page = 97;
+    var limit = 97;
     var filter = "filter";
     var sort = "sort";
 
