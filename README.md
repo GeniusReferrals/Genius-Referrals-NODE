@@ -376,8 +376,8 @@ function getAdvocates(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 97;
-    var limit = 97;
+    var page = 64;
+    var limit = 64;
     var filter = "filter";
     var sort = "sort";
 
@@ -482,7 +482,7 @@ function putPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, a
 
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
-    var advocatePaymentMethodId = 97;
+    var advocatePaymentMethodId = 64;
     var advocatePaymentMethodForm = new PaymentMethodForm({"key":"value"});
 
     controller.putPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, advocatePaymentMethodForm, function(error, response, context) {
@@ -517,7 +517,7 @@ function getPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, c
 
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
-    var advocatePaymentMethodId = 97;
+    var advocatePaymentMethodId = 64;
 
     controller.getPaymentMethod(accountSlug, advocateToken, advocatePaymentMethodId, function(error, response, context) {
 
@@ -692,8 +692,8 @@ function getPaymentMethods(accountSlug, advocateToken, page, limit, filter, sort
 
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
-    var page = 97;
-    var limit = 97;
+    var page = 155;
+    var limit = 155;
     var filter = "filter";
     var sort = "sort";
 
@@ -770,8 +770,8 @@ function getAccounts(page, limit, filter, sort, callback)
 
 ```javascript
 
-    var page = 97;
-    var limit = 97;
+    var page = 155;
+    var limit = 155;
     var filter = "filter";
     var sort = "sort";
 
@@ -881,7 +881,7 @@ function getTopAdvocates(accountSlug, campaignSlug, limit, from, to, callback)
 
     var accountSlug = account_slug;
     var campaignSlug = campaign_slug;
-    var limit = 97;
+    var limit = 155;
     var from = date("D M d, Y G:i");
     var to = date("D M d, Y G:i");
 
@@ -1274,8 +1274,8 @@ function getReferrals(accountSlug, advocateToken, page, limit, filter, sort, cal
 
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
-    var page = 97;
-    var limit = 97;
+    var page = 155;
+    var limit = 155;
     var filter = "filter";
     var sort = "sort";
 
@@ -1425,7 +1425,7 @@ function patchRedemptionRequest(accountSlug, redemptionRequestId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var redemptionRequestId = 97;
+    var redemptionRequestId = 247;
 
     controller.patchRedemptionRequest(accountSlug, redemptionRequestId, function(error, response, context) {
 
@@ -1524,8 +1524,8 @@ function getRedemptionRequests(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 97;
-    var limit = 97;
+    var page = 247;
+    var limit = 247;
     var filter = "filter";
     var sort = "sort";
 
@@ -1574,8 +1574,8 @@ function getBonuses(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 97;
-    var limit = 97;
+    var page = 247;
+    var limit = 247;
     var filter = "filter";
     var sort = "sort";
 
@@ -1645,7 +1645,7 @@ function getBonusCheckup(accountSlug, advocateToken, reference, paymentAmount, c
     var accountSlug = account_slug;
     var advocateToken = advocate_token;
     var reference = "reference";
-    var paymentAmount = 97.6565526019114;
+    var paymentAmount = 247.051445675106;
 
     TestHelper.getFileContents("url", function(data) {
         controller.getBonusCheckup(accountSlug, advocateToken, reference, paymentAmount, function(error, response, context) {
@@ -1710,7 +1710,7 @@ function getBonusTrace(accountSlug, traceId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var traceId = 97;
+    var traceId = 247;
 
     controller.getBonusTrace(accountSlug, traceId, function(error, response, context) {
 
@@ -1742,7 +1742,7 @@ function deleteBonus(accountSlug, bonusId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var bonusId = 97;
+    var bonusId = 247;
 
     controller.deleteBonus(accountSlug, bonusId, function(error, response, context) {
 
@@ -1774,7 +1774,7 @@ function getBonus(accountSlug, bonusId, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var bonusId = 97;
+    var bonusId = 247;
 
     controller.getBonus(accountSlug, bonusId, function(error, response, context) {
 
@@ -1809,8 +1809,8 @@ function getBonusTraces(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 97;
-    var limit = 97;
+    var page = 247;
+    var limit = 247;
     var filter = "filter";
     var sort = "sort";
 
@@ -1891,8 +1891,8 @@ function getCampaigns(accountSlug, page, limit, filter, sort, callback)
 ```javascript
 
     var accountSlug = account_slug;
-    var page = 97;
-    var limit = 97;
+    var page = 247;
+    var limit = 247;
     var filter = "filter";
     var sort = "sort";
 
