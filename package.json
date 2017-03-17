@@ -1,11 +1,11 @@
 {
   "name": "geniusreferralslib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Genius Referrals API",
   "main": "./lib/index.js",
   "scripts": {},
   "keywords": [],
-  "author": "APIMATIC SDK Generator",
+  "author": "Alain Hernandez <alain@geniusreferrals.com>",
   "dependencies": {
     "request": "^2.55.0"
   }
