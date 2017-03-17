@@ -1,10 +1,10 @@
 {
-  "name": "geniusreferralslib",
+  "name": "geniusreferrals",
   "version": "1.0.1",
   "description": "The Genius Referrals API",
   "main": "./lib/index.js",
   "scripts": {},
-  "keywords": [],
+  "keywords": ["referral", "referrals", "refer", "friend", "friends", "referral marketing programs", "word of mouse", "promotion programs", "referral programs", "refer a friend", "promotion campaigns", "referral campaigns", "marketing campaigns", "afiliation", "affiliate", "refer friend", "affiliates", "geniusreferrals"],
   "author": "Alain Hernandez <alain@geniusreferrals.com>",
   "dependencies": {
     "request": "^2.55.0"
